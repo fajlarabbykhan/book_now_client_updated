@@ -13,6 +13,7 @@ import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
+import { useNavigate } from "react-router-dom";
 const Header = ({ type }) => {
   const [date, setDate] = useState([
     {
@@ -24,6 +25,7 @@ const Header = ({ type }) => {
 
   const [openDate, setOpenDate] = useState(false);
   const [openOptions, setOpenOptions] = useState(false);
+  const [destination, setDestination] = useState("");
   const [options, setOptions] = useState({
     adult: 1,
     children: 0,
@@ -39,6 +41,11 @@ const Header = ({ type }) => {
     });
   };
 
+  const navigate = useNavigate();
+  const handleSearch = () => {
+    // console.log(destination, date, options);
+    navigate("/hotels", { state: { destination, date, options } });
+  };
   return (
     <div className="px-6 bg-[#40415a]  text-white ">
       <div className=" flex justify-start">
@@ -86,7 +93,8 @@ const Header = ({ type }) => {
               <input
                 type="text"
                 placeholder="Where are you going?"
-                className="border-none	outline-none	text-gray-500"
+                className="border-none	outline-none	text-gray-500 "
+                onChange={(e) => setDestination(e.target.value)}
               />
             </div>
             <div className="flex items-center gap-5 m-3 z-30">
@@ -110,6 +118,7 @@ const Header = ({ type }) => {
                   onChange={(item) => setDate([item.selection])}
                   moveRangeOnFirstSelection={false}
                   ranges={date}
+                  minDate={new Date()}
                   className="absolute top-28 md:top-16"
                 />
               )}
@@ -195,7 +204,10 @@ const Header = ({ type }) => {
               )}
             </div>
             <div className="flex items-center justify-start md:justify-center ml-3 gap-5  ">
-              <button className="btn btn-primary w-3/6 bg-[#40415a]">
+              <button
+                className="btn btn-primary w-3/6 bg-[#40415a]"
+                onClick={handleSearch}
+              >
                 Search
               </button>
             </div>
