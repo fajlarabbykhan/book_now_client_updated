@@ -89,7 +89,7 @@ const Header = ({ type }) => {
                 className="border-none	outline-none	text-gray-500"
               />
             </div>
-            <div className="flex items-center gap-5 m-3 ">
+            <div className="flex items-center gap-5 m-3 z-30">
               <FontAwesomeIcon
                 icon={faCalendarDays}
                 className="text-gray-500"
@@ -114,7 +114,7 @@ const Header = ({ type }) => {
                 />
               )}
             </div>
-            <div className="flex items-center gap-5 m-3 ">
+            <div className="flex items-center gap-5 m-3 z-30">
               <FontAwesomeIcon icon={faPerson} className="text-gray-500" />
               <span
                 className="text-gray-500  cursor-pointer "
@@ -195,7 +195,9 @@ const Header = ({ type }) => {
               )}
             </div>
             <div className="flex items-center justify-start md:justify-center ml-3 gap-5  ">
-              <button className="btn btn-primary w-3/6 ">Search</button>
+              <button className="btn btn-primary w-3/6 bg-[#40415a]">
+                Search
+              </button>
             </div>
           </div>
         </>
