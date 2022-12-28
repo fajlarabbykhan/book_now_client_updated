@@ -33,7 +33,7 @@ const Featured = () => {
             alt=""
             className="featuredImg"
           />
-          <div className="absolute bottom-[30px] ml-5">
+          <div className="absolute bottom-[30px] p-2">
             <h1 className="text-xl font-bold">Sylhet</h1>
             <h2>532 properties</h2>
           </div>

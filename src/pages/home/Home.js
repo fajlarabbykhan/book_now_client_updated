@@ -3,6 +3,8 @@ import Navbar from "../../components/Navbar";
 import Header from "../../components/Header";
 import Featured from "../../components/Featured";
 import PropertyList from "../../components/PropertyList";
+import FeaturedProperties from "../../components/FeaturedProperties";
+import MailList from "../../components/MailList";
 const Home = () => {
   return (
     <>
@@ -20,6 +22,14 @@ const Home = () => {
           Browse by property type
         </h1>
         <PropertyList />
+        <h1 className="lg:w-[1024px] lg:p-2 text-2xl font-bold mt-5">
+          Stay at our top unique properties
+        </h1>
+        <h1 className="lg:w-[1024px] lg:p-2 text-sm text-gray-400  mb-2 lg:mb-0">
+          From castles and villas to boats and igloos, we have it all
+        </h1>
+        <FeaturedProperties />
+        <MailList />
       </div>
     </>
   );
