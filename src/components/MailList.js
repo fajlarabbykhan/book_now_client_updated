@@ -17,7 +17,7 @@ const MailList = () => {
         <input
           type="text"
           placeholder="Your Email"
-          className="w-[300px] h-[40px] p-5 outline-none	mr-[10px] rounded-md	"
+          className="w-[300px] h-[40px] p-5 outline-none	mr-[10px] rounded-md	p-2 text-gray-500"
         />
         <button className="h-[40px] text-white font-medium outline-none rounded-md cursor-pointer bg-indigo-600 p-2	">
           Subscribe
