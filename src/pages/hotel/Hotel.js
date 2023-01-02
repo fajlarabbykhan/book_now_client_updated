@@ -41,7 +41,7 @@ const Hotel = () => {
             <h1 className="text-2xl">Tower Street Apartments</h1>
             <div className=" text-xs flex items-center gap-2">
               <FontAwesomeIcon icon={faLocationDot} />
-              <span>Elton St 125 New york</span>
+              <span>Dhanmondi 125 Dhaka</span>
             </div>
             <span className="text-[#1f214d] font-medium ">
               Excellent location – 500m from center
@@ -52,7 +52,11 @@ const Hotel = () => {
             <div className="flex flex-wrap justify-between">
               {photos.map((photo, i) => (
                 <div className="w-[33%] " key={i}>
-                  <img src={photo.src} alt="" className="w-full object-cover" />
+                  <img
+                    src={photo.src}
+                    alt=""
+                    className="w-full object-cover m-[2px]"
+                  />
                 </div>
               ))}
             </div>
